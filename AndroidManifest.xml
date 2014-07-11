@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emop.client"
+    android:versionCode="14"
+    android:versionName="1.1.3" >
+
+    <uses-sdk android:minSdkVersion="6" />
+    
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_APN_SETTINGS"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />    
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_LOGS" /> 
+    
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="gexin.permission.GexinService" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <permission android:name="gexin.permission.GexinService" android:protectionLevel="normal" />
+
+    <application
+    	android:name="com.emop.client.TaodianhuoApplication"
+        android:icon="@drawable/fmei_logo"
+        android:label="@string/app_name" >
+    	<meta-data android:name="BaiduMobAd_CHANNEL" android:value="emop" />
+    	<meta-data android:name="BaiduMobAd_STAT_ID" android:value="208ad1f809" />
+    	<meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="SET_TIME_INTERVAL" />
+    	<meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" />
+    	<meta-data android:name="BaiduMobAd_TIME_INTERVAL" android:value="4" />
+    	
+		<meta-data android:name="appid" android:value="vSd02qg99f9yboL7letUv2" />
+		<meta-data android:name="appkey" android:value="ItlbbCMt8l7uMluEEaroy7" />
+		<meta-data android:name="appsecret" android:value="Mq6U0Nx6Dq6kTS2dF0ncO1" />   
+		
+    	<meta-data android:name="emop_track_id" android:value="EMOP_USER" />
+       	
+       	<provider android:name=".provider.FmeiProvider"
+            android:authorities="com.emop.client.provider.Fmei"
+        />
+                
+        <activity
+            android:name=".MainTabActivity"
+            android:label="@string/app_name"
+	        android:screenOrientation="portrait" 
+	        android:theme="@style/emop_theme.mainTab"
+    	    android:configChanges="orientation|keyboardHidden|keyboard|screenLayout"  
+    	    android:launchMode="singleTask"     	             
+            >      
+			<intent-filter>
+			     <action android:name="android.intent.action.VIEW" />
+			     <category android:name="android.intent.category.DEFAULT" />
+			     <data android:scheme="taodianhuo" />
+                 <category android:name="android.intent.category.BROWSABLE" />
+			</intent-filter>
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".MainActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:launchMode="singleTop"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".HomeActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".GuangItemListActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>   
+                        
+        <activity
+            android:label="@string/app_name"
+            android:name=".GuangActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>     
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".HotActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>     
+                
+        <activity
+            android:label="@string/app_name"
+            android:name=".CateListActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>     
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".MyFavoriteActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>     
+        
+        <activity
+            android:label="@string/app_name"
+            android:name=".SettingActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation|keyboardHidden|keyboard|screenLayout"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>  
+        <activity
+            android:label="@string/app_name"
+            android:name=".TaokeItemDetailActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>  
+        <activity
+            android:label="@string/app_name"
+            android:name=".TaokeItemImageActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>  
+
+        <activity
+            android:label="@string/app_name"
+            android:name=".WebViewActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>          
+        <activity
+            android:label="@string/app_name"
+            android:name=".WebLoginActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>               
+        <activity
+            android:label="@string/app_name"
+            android:name=".LoginActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>   
+        <activity
+            android:label="@string/app_name"
+            android:name=".QQLoginActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>  
+        <activity
+            android:label="@string/app_name"
+            android:name=".ShareToWeiboActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>         
+        <activity
+            android:label="@string/app_name"
+            android:name=".AboutMeActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>    
+        <activity
+            android:label="@string/app_name"
+            android:name=".MutilFragmentActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity> 
+                               
+        <activity
+            android:label="@string/app_name"
+            android:name=".RegisterActivity" 
+            android:screenOrientation="portrait" 
+            android:configChanges="orientation"
+            android:theme="@android:style/Theme.NoTitleBar"
+            >
+        </activity>          
+        
+        <receiver
+            android:name=".wxapi.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND"
+             >
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>   
+                
+        <!-- 个推服务配置。  -->
+		<activity android:name="com.igexin.sdk.GexinSdkActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			android:taskAffinity="android.task.GexinSdkActivityTask"
+			android:excludeFromRecents="true"
+			android:process="com.emop.client.pushservice">
+			<intent-filter>
+				<action android:name="com.igexin.action.popupact.com.emop.client" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<service android:label="NotificationCenterAIDL"
+			android:name="com.igexin.sdk.aidl.GexinMsgService"
+			android:process="com.emop.client.pushservice">
+			<intent-filter>
+				<action android:name="com.igexin.sdk.aidl.action.com.emop.client" />
+			</intent-filter>
+		</service>
+		<service android:label="NotificationCenter"
+			android:name="com.igexin.sdk.GexinMainService"
+			android:process="com.emop.client.pushservice">
+			<intent-filter>
+				<action android:name="com.igexin.sdk.action.com.emop.client" />
+			</intent-filter>
+		</service>
+		<receiver android:name="com.igexin.sdk.GexinSdkReceiver">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>		
+		<receiver android:name="GexinSdkMsgReceiver">
+			<!-- 如下配置用于透传-->
+			<intent-filter>
+				<action android:name="com.igexin.sdk.action.vSd02qg99f9yboL7letUv2" />
+			</intent-filter>
+		</receiver>
+                                                
+    </application>
+
+</manifest>

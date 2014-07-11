@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff8f8f8"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="热门" />
+        <!--
+		<ImageView android:gravity="center_vertical" 
+		    android:id="@+id/img_main_menu_bg_home" 
+		    android:src="@drawable/refresh_style" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+			android:layout_centerVertical="true"	
+			android:layout_alignParentRight="true"	  
+			android:onClick="onRefresh"    				      
+			 />
+        -->
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <Gallery
+                android:id="@+id/header_banner"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="#fff8f8f8" />
+            
+			<fragment class="com.emop.client.fragment.HotCateFragment" 
+			       android:id="@+id/topicPage"
+		           android:layout_width="fill_parent"
+		           android:layout_height="wrap_content"		    
+			    />
+	            
+			<!-- 
+            <LinearLayout
+                android:id="@+id/cate_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+             -->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

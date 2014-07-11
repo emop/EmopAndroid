@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="10.0dip" >
+
+        <LinearLayout
+            android:id="@+id/logo_view"
+            android:layout_width="90.0dp"
+            android:layout_height="90.0dp"
+            android:layout_marginLeft="5.0dip"
+            android:background="@drawable/shop_icon_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/shop_logo"               
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10.0dip"
+            android:orientation="vertical" >
+
+            <TextView
+	            android:id="@+id/shop_title"            
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="店铺名字"
+                android:textColor="#ff7c5d48"
+                android:textSize="18.0dip"
+                android:textStyle="bold" />
+
+           
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="掌柜："
+                    android:textColor="@color/grayLight"
+                    android:textSize="13.0dip" />
+
+                <TextView
+                    android:id="@+id/user_nick"                    
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="掌柜名"
+                    android:textColor="@color/grayLight"
+                    android:textSize="14.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0" 
+                android:layout_marginTop="5.0dip">
+
+                <ImageView
+	                android:id="@+id/shop_type_logo"                
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tmall_logo"
+                    android:visibility="gone"
+                     />
+
+	 			<GridView
+	                android:id="@+id/taobao_credit"
+	                android:layout_width="75dp"
+	                android:layout_height="15dp"
+	                android:background="@android:color/transparent"
+	                android:fadingEdge="none"
+	                android:gravity="center_horizontal"
+	                android:listSelector="@android:color/transparent"
+	                android:numColumns="5"
+	                android:smoothScrollbar="true"
+	                android:visibility="gone" />                
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/grayLight"
+                android:textSize="14.0dip"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

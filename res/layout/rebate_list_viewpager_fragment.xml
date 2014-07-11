@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" 
+    android:background="#fff8f8f8">
+
+    <HorizontalScrollView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none" 
+         android:background="@drawable/shop_nav_tab_bg">
+
+        <LinearLayout
+            android:id="@+id/navigationGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <include
+                android:layout_width="match_parent"
+                layout="@layout/shop_nav_tab_item" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:background="#ffF5F5F5" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff8f8f8"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg" >
+
+        <!--
+		<ImageView android:gravity="center_vertical" 
+		    android:id="@+id/img_main_menu_bg_home" 
+		    android:src="@drawable/refresh_style" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+			android:layout_centerVertical="true"	
+			android:layout_marginRight="0dp"
+			android:layout_alignParentRight="true"	  
+			android:onClick="onRefresh"    				      
+			 />
+		
+		<Button android:gravity="center_vertical" 
+		    android:id="@+id/img_main_menu_bg_home2" 
+		    android:background="@drawable/refresh_style" 
+		    android:layout_width="wrap_content" 
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"	
+			android:layout_marginRight="10dp"	      
+			 />
+        -->
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="逛街" 
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/activity_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:background="#ffffffff"
+        android:divider="#ffffff"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

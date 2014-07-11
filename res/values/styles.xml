@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="headerTextStyle">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#30000000</item>
+        <item name="android:shadowDy">-1.0</item>
+        <item name="android:shadowRadius">0.0</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+        
+    <style name="tabTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#dedede</item>
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#30000000</item>
+        <item name="android:shadowDy">-1.0</item>
+        <item name="android:shadowRadius">0.0</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>    
+    
+    <style name="setting_item_content_text">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff8c8c8c</item>
+    </style>
+    
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+   		<item name="android:windowFrame">@color/transparent</item>
+<!--    <item name="android:windowIsFloating">true</item> -->
+<!--    <item name="android:windowIsTranslucent">false</item> -->
+	    <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <style name="shop_nav_tab_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#eb5a05</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+
+    <style name="shop_nav_tab_selected" parent="@style/shop_nav_tab_normal">
+    </style>
+    
+</resources>

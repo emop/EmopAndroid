@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emop="http://schemas.android.com/apk/res/com.emop.client"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffF5F5F5"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg" >
+
+        <ImageButton
+            android:id="@+id/img_main_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="0dp"
+            android:background="#00000000"
+            android:gravity="center_vertical"
+            android:onClick="onFinish"
+            android:padding="0dp"
+            android:src="@drawable/back_style" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="逛街" />
+    </RelativeLayout>
+    <!-- 
+	<include layout="@layout/fav_tabs" />
+	 -->
+    <com.emop.client.widget.WaterFallView
+        android:id="@+id/waterfall_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffF5F5F5"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/waterfall_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:id="@+id/head_loader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/refresh_flag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_pulltorefresh_arrow" />
+
+                <ProgressBar
+                    android:id="@+id/loading_bar"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:indeterminateDrawable="@drawable/rotate_loading" />
+
+                <TextView
+                    android:id="@+id/loading_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="3dp"
+                    android:text="加载中" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/error_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/head_loader"
+                android:background="#ffF5F5F5"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/no_items" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/no_fav"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/head_loader"
+                android:background="#ffF5F5F5"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/no_fav" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/waterfall_container"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/error_view" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottom_loader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/waterfall_container"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingTop="10dp"
+                android:visibility="gone" >
+
+                <ProgressBar
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:indeterminateDrawable="@drawable/rotate_loading" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="3dp"
+                    android:text="努力加载中" />
+            </LinearLayout>
+        </RelativeLayout>
+    </com.emop.client.widget.WaterFallView>
+    <!-- 
+	<fragment class="com.emop.client.fragment.ShopListFragment" 
+	       android:id="@+id/shopList"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:visibility="gone"
+           emop:data_source="fav"
+	/>
+	 -->
+</LinearLayout>

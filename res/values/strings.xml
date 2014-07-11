@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">兜兜购</string>
+    <string name="rebate_name">限时特惠</string>
+    <string name="crown_shop_name">皇冠店铺精选</string>
+    
+    <string name="item_detail_name">宝贝详情</string>
+    <string name="shop_detail_name">店铺详情</string>
+</resources>

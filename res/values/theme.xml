@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="emop_theme" parent="android:Theme.Black">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    
+    <style name="emop_theme.mainTab" >
+    </style>
+    
+    <style name="emop_theme.votingImage" >
+    </style> 
+    
+    <style name="emop_theme.NewVoteImage" >
+    </style>     
+</resources>

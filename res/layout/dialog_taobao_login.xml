@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/new_version_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:minLines="3"
+            android:padding="14dp"
+            android:text="是否绑定淘宝账号？"
+            android:textColor="#ffeeeeee"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/needUpgrade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/login_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headview_button_bg"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="16sp"
+                    android:text="马上绑定" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/upgrade_later"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/headview_button_bg"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="16sp"
+                    android:text="稍后再说" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

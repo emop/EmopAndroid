@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/guang_view_item_bg"
+    android:focusable="false"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <FrameLayout
+        android:id="@+id/main_menu_container"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="#ffffffff"
+        >
+
+        <ImageView
+            android:id="@+id/topic_front_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0dp"
+            android:clickable="false"
+            android:scaleType="centerCrop"
+            android:src="@drawable/loading" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/themelist_round_img" />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/guang_list_border" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/theme_list_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="12dp" >
+
+        <TextView
+            android:id="@+id/topic_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:enabled="false"
+            android:focusable="false"
+            android:text="描述"
+            android:textColor="#606060"
+            android:textSize="14.0sp"
+            />
+		<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="3dp" >
+        
+        <TextView
+                    android:id="@+id/item_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/guang_item_ico"
+                    android:drawablePadding="1dp"
+                    android:gravity="left|center"
+                    android:text="100"
+                    android:textColor="#ffc4c4c4"
+                    android:textSize="12.0sp" />
+        <TextView
+            android:id="@+id/topic_update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:enabled="false"
+            android:focusable="false"
+            android:gravity="right"
+            android:text="2012-11-16"
+            android:textColor="#8B8A89"
+            android:textSize="10.0sp" />
+    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

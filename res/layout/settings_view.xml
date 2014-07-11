@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/user_setting"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffF6F6F6"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bg" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="设置" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:layout_marginBottom="50dp" 
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginTop="4.0dip"
+                android:drawableLeft="@drawable/set_point"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:text="用户登录"
+                android:textColor="#FFABADB3"
+                android:textSize="16.0sp" />
+            <!-- 登录开始 -->
+
+            <LinearLayout
+                android:id="@+id/settings_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/settings_border"
+                android:orientation="vertical" >
+
+ 
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="#ffDDDDDD" />
+
+                <LinearLayout
+                    android:id="@+id/setting_login_qq"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_bg"
+                    android:gravity="left|center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/qq_l" />
+
+                    <TextView
+                        android:id="@+id/setting_qq_user"
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:text="设置QQ账号登录" />
+
+                    <ImageButton
+                        android:id="@+id/login_btn_qq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/settings_login_btn"
+                        android:onClick="doLoginFromQQ" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ffDDDDDD" />
+
+                <LinearLayout
+                    android:id="@+id/setting_login_sina"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_bg"
+                    android:gravity="left|center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/sina_l" />
+
+                    <TextView
+                        android:id="@+id/setting_sina_user"
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:text="设置新浪微博登录" />
+
+                    <ImageButton
+                        android:id="@+id/login_btn_sina"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="8dip"
+                        android:background="@drawable/settings_logout_btn"
+                        android:onClick="doLoginFromSina" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 登录结束 -->
+
+
+            <!-- 版本更新开始 -->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginTop="4.0dip"
+                android:drawableLeft="@drawable/set_point"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:text="更新版本"
+                android:textColor="#FFABADB3"
+                android:textSize="16.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/settings_border"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_round"
+                    android:clickable="true"
+                    android:gravity="left|center"
+                    android:onClick="onCheckUpgradeVersion" >
+
+                    <ImageView
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/setting_update" />
+
+                    <TextView
+                        android:id="@+id/setting_verison_name"
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1.0"
+                        android:text="已经是最新版本了（1.0.7）" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/setting_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 版本更新结束 -->
+
+
+            <!-- 应用和关于开始 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginTop="4.0dip"
+                android:drawableLeft="@drawable/set_point"
+                android:drawablePadding="2.0dip"
+                android:gravity="center_vertical"
+                android:text="其他"
+                android:textColor="#FFABADB3"
+                android:textSize="16.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/settings_border"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/message_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_top"
+                    android:clickable="true"
+                    android:gravity="left|center"
+                    android:onClick="onMessageList" >
+
+                    <ImageView
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/setting_info" />
+
+                    <TextView
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1.0"
+                        android:text="消息中心" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/setting_right" />
+                </LinearLayout>
+                <!-- 清除开始 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ffDDDDDD" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_shape"
+                    android:clickable="true"
+                    android:gravity="left|center"
+                    android:onClick="cleanupImageCache"
+                     >
+
+                    <ImageView
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/setting_clear_up" />
+
+                    <TextView
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1.0"
+                        android:text="清除图片缓存" 
+                        />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/setting_right" />
+                </LinearLayout>
+                <!-- 清除结束 -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ffDDDDDD" />
+
+                <LinearLayout
+                    android:id="@+id/setting_apps"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_shape"
+                    android:clickable="true"
+                    android:gravity="left|center"
+                    android:onClick="onAppList" >
+
+                    <ImageView
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/setting_apps" />
+
+                    <TextView
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1.0"
+                        android:text="手机应用推荐" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/setting_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ffDDDDDD" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/settings_corner_bottom"
+                    android:clickable="true"
+                    android:gravity="left|center"
+                    android:onClick="onAboutMe"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="28px"
+                        android:layout_height="28px"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/setting_about" />
+
+                    <TextView
+                        style="@style/setting_item_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1.0"
+                        android:text="关于兜兜购" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/setting_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 应用和关于结束 -->
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:gravity="center|bottom"
+                android:text="兜兜购，口袋里的购物专家"
+                android:textColor="#FFABADB3"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

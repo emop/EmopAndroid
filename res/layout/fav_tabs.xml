@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fav_select_left_bg"
+        android:orientation="horizontal"
+        android:id="@+id/nav_fav_tabs"
+         >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="宝贝收藏"
+            android:textColor="@drawable/fav_nav_tab_btn_color"
+            android:textStyle="bold" 
+            android:clickable="true"
+            android:state_enabled="false"
+            android:enabled="false"
+            android:id="@+id/fav_taoke"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="店铺收藏"
+            android:textColor="@drawable/fav_nav_tab_btn_color"
+            android:clickable="true"
+            android:id="@+id/fav_shop"    
+            android:state_enabled="true"        
+             />
+    </LinearLayout>
+

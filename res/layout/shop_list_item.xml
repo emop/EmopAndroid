@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+	android:paddingLeft="5dp"
+	android:paddingRight="5dp"
+	android:paddingBottom="5dp"
+	android:descendantFocusability="blocksDescendants"
+    >
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/shop_list_item_bg"
+    android:orientation="vertical" 
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/shop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="店铺标题"
+            android:textColor="#ff000000"
+            android:textSize="18.0sp"
+             />
+
+        <Button
+            android:id="@+id/add_to_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.0dip"
+            android:background="@drawable/collection_add_selector" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5.0dip"
+        android:background="@drawable/shop_list_item_slide" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="10.0dip"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:background="@drawable/bg_shop_item_logo"
+                android:padding="5.0dip" >
+
+                <ImageView
+                    android:id="@+id/shop_logo"
+                    android:layout_width="50.0dip"
+                    android:layout_height="50.0dip"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+ 			
+ 			<GridView
+                android:id="@+id/taobao_credit"
+                android:layout_width="50.0dip"
+                android:layout_height="15.0dip"
+                android:background="@android:color/transparent"
+                android:columnWidth="50.0dip"
+                android:fadingEdge="none"
+                android:gravity="center_horizontal"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="5"
+                android:smoothScrollbar="true"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/shop_type_logo"
+                android:layout_width="52.0dip"
+                android:layout_height="16.0dip"
+                android:src="@drawable/tmall_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="13dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="掌柜:" />
+
+                <TextView
+                    android:id="@+id/user_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我是掌柜" 
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/shop_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店铺描述"
+                android:textSize="15.0sp" 
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+</LinearLayout>
+
+

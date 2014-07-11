@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:orientation="horizontal"
+    android:paddingLeft="6.0dip"
+    android:paddingRight="6.0dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="8.0dip"
+        android:layout_weight="1.0"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:weightSum="10.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3.0dip"
+                android:layout_weight="4.5"
+                android:background="@drawable/theme_template_item_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/item_0"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/theme_default_img" />
+
+                    <ImageView
+                        android:id="@+id/item_click_0"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1.0"
+                        android:clickable="true"
+                        android:src="@drawable/theme_shap_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3.0dip"
+                android:layout_marginTop="3.0dip"
+                android:layout_weight="5.5"
+                android:background="@drawable/theme_template_item_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/item_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/theme_default_img" />
+
+                    <ImageView
+                        android:id="@+id/item_click_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1.0"
+                        android:clickable="true"
+                        android:src="@drawable/theme_shap_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:weightSum="10.0" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_weight="5.5"
+                android:background="@drawable/theme_template_item_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="5.5"
+                    android:paddingBottom="5.0dip" >
+
+                    <ImageView
+                        android:id="@+id/item_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/theme_default_img" />
+
+                    <ImageView
+                        android:id="@+id/item_click_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1.0"
+                        android:clickable="true"
+                        android:src="@drawable/theme_shap_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginTop="3.0dip"
+                android:layout_weight="4.5"
+                android:background="@drawable/theme_template_item_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:layout_weight="1.0" >
+
+                    <ImageView
+                        android:id="@+id/item_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/theme_default_img" />
+
+                    <ImageView
+                        android:id="@+id/item_click_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1.0"
+                        android:clickable="true"
+                        android:src="@drawable/theme_shap_bg" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

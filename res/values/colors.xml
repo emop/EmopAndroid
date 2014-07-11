@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_categories_selector_title">#ff000000</color>
+    <color name="color_categories_selector_value">#ff494949</color>
+    <color name="color_dialog_question_color">#ff333232</color>
+    <color name="color_top_bar">#ff72736e</color>
+    <color name="color_white">#ffffffff</color>
+    <color name="color_text_color">#ff72736e</color>
+    <color name="color_hint_color">#ffc5cacd</color>
+    <color name="color_error_color">#ffde0505</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_dialog_bg">#fff5efdf</color>
+    <color name="color_categories_selector_over">#fff7b949</color>
+    <color name="color_categories_selector_selected">#ffdfe4e7</color>
+    <color name="color_semi_transparent">#50111111</color>
+    <color name="color_look_title">#ff1f1f1f</color>
+    <color name="color_look_item_label">#ff1f1f1f</color>
+    <color name="color_look_title_bg">#f0ffffff</color>
+    <color name="color_bg">#ffd8d4c7</color>
+    
+    <color name="color_hot_item">#F0F0F0</color>
+    
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="no_back">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#ffededed</color>
+    <color name="red">#ffff0000</color>
+    <color name="translucent_background">#99000000</color>
+    <color name="lightgreen">#ff90ee90</color>
+    
+    <drawable name="guang_view_item_normal">#F0F0F0</drawable> 
+    <drawable name="guang_view_item_pressed">#e7e7e7</drawable>   
+    
+    <drawable name="detail_btn_normal">#FF3B3E</drawable> 
+    <drawable name="detail_btn_pressed">#E73D3E</drawable>   
+    
+    
+    <drawable name="detail_tab_color1">#ff999999</drawable>  
+    <drawable name="detail_tab_color2">#eb5902</drawable>  
+    
+    <drawable name="guang_border_normal">#ffffffff</drawable>  
+    <drawable name="guang_border_pressed">#F45000</drawable>  
+    
+    <drawable name="detail_img_ico_bg_pressed">#FFC2CE</drawable>  
+    <drawable name="detail_img_ico_bg_normal">#FD6E8A</drawable>  
+    
+    <drawable name="theme_shap">#44000000</drawable>
+    
+    <color name="grayLight">#ff515151</color>
+    <color name="shop_service_pink">#ffff4754</color>
+    <color name="shop_service_green">#ff509f1b</color>
+    
+    <color name="shop_nav_tab_selected">#eb5a05</color>
+    <color name="shop_nav_tab_normal">#ff509f1b</color>
+    
+    <drawable name="fav_nav_tab_selected">#eb5a05</drawable>
+    <drawable name="fav_nav_tab_normal">#979797</drawable>    
+    
+</resources>

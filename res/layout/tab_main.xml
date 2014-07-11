@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#fff8f8f8"
+        android:orientation="vertical"
+        >
+        
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+		<TabWidget android:id="@android:id/tabs" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		
+		<FrameLayout android:orientation="horizontal" android:id="@+id/main_menu_container" android:background="@drawable/footer_bg" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="50.0dip">
+			    <ImageView android:gravity="center_vertical" android:id="@+id/img_main_menu_bg_home" android:background="@drawable/nav_menu_bg" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent"  android:layout_weight="1.0" />
+			    <ImageView android:id="@+id/img_main_menu_bg_hot" android:background="@drawable/nav_menu_bg" android:visibility="invisible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent"  android:layout_weight="1.0" />
+			    <ImageView android:id="@+id/img_main_menu_bg_cate" android:background="@drawable/nav_menu_bg" android:visibility="invisible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+			    <ImageView android:id="@+id/img_main_menu_bg_my" android:background="@drawable/nav_menu_bg" android:visibility="invisible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent"  android:layout_weight="1.0" />
+			    <ImageView android:id="@+id/img_main_menu_bg_setting" android:background="@drawable/nav_menu_bg" android:visibility="invisible" android:clickable="false" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />    
+			</LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingTop="3dp" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button style="@style/tabTextStyle" android:background="#00000000" android:gravity="center_horizontal" android:id="@+id/tv_main_menu_text_home" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="逛街" android:drawableTop="@drawable/nav_menu_guang_style" android:layout_weight="1.0" android:drawablePadding="-3dip"/>
+                <Button style="@style/tabTextStyle" android:background="#00000000" android:gravity="center_horizontal" android:id="@+id/tv_main_menu_text_hot" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="热门" android:drawableTop="@drawable/nav_menu_hot_style" android:layout_weight="1.0" android:drawablePadding="-3dip"/>
+                <Button style="@style/tabTextStyle" android:background="#00000000" android:gravity="center_horizontal" android:id="@+id/tv_main_menu_text_cate" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分类" android:drawableTop="@drawable/nav_menu_cate_style" android:layout_weight="1.0" android:drawablePadding="-3dip"/>
+                <Button style="@style/tabTextStyle" android:background="#00000000" android:gravity="center_horizontal" android:id="@+id/tv_main_menu_text_my" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="收藏" android:drawableTop="@drawable/nav_menu_myfav_style" android:layout_weight="1.0" android:drawablePadding="-3dip"/>
+                <Button style="@style/tabTextStyle" android:background="#00000000" android:gravity="center_horizontal" android:id="@+id/tv_main_menu_text_setting" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="设置" android:drawableTop="@drawable/nav_menu_setting_style" android:layout_weight="1.0" android:drawablePadding="-3dip"/>			
+			</LinearLayout>
+		</FrameLayout>			                		                
+    </RelativeLayout>
+</TabHost>

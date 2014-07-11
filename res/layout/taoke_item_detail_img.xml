@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+         <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/gray"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:dividerHeight="0.0px"
+        android:fadingEdge="none"
+        android:listSelector="@null"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:scrollingCache="true"
+        android:smoothScrollbar="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="right|top"
+        android:layout_margin="10dp" >
+
+        <ImageView
+            android:id="@+id/fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:background="@drawable/detail_img_ico_bg"
+            android:padding="5.0dip"
+            android:clickable="true"
+            android:src="@drawable/detail_fav_white" />
+
+        <ImageView
+            android:layout_weight="1.0"
+            android:id="@+id/buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fav"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/detail_img_ico_bg"
+            android:padding="5.0dip"
+            android:clickable="true"
+            android:src="@drawable/detail_buy_white" />
+    </RelativeLayout>
+
+</RelativeLayout>

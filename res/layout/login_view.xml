@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/headerbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header_bg" >
+
+        <ImageButton
+            android:id="@+id/img_main_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="0dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:onClick="onFinish"
+            android:padding="0dp"
+            android:src="@drawable/back_style" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/headerTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="登录"
+            android:textColor="#ffffffff"
+            android:textSize="24.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_email"
+        android:layout_width="290.0dip"
+        android:layout_height="45.0dip"
+        android:layout_below="@+id/headerbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.0dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/box_top" />
+
+        <TextView
+            android:id="@+id/login_email_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:text="账户"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/login_email_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="70.0dip"
+            android:background="@null"
+            android:hint="Email 或 昵称"
+            android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/divider1"
+        android:layout_width="290.0dip"
+        android:layout_height="1.0px"
+        android:layout_below="@id/login_email"
+        android:layout_centerHorizontal="true"
+        android:background="#ffb0b0b0"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/login_passward"
+        android:layout_width="290.0dip"
+        android:layout_height="45.0dip"
+        android:layout_alignLeft="@id/login_email"
+        android:layout_alignRight="@id/login_email"
+        android:layout_below="@id/divider1"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/box_bottom" />
+
+        <TextView
+            android:id="@+id/login_passward_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15.0dip"
+            android:text="密码"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/login_passward_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="70.0dip"
+            android:background="@null"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignLeft="@+id/login_passward"
+        android:layout_alignRight="@+id/login_passward"
+        android:layout_below="@+id/login_passward"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/headview_button"
+        android:onClick="doLogin"
+        android:text="立即登录"
+        android:textColor="#ffffffff"
+        android:textSize="20.0sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/or"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn_login"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="---------- 用以下方式互联登陆 ----------"
+            android:textColor="#ffc0c0c0"
+            android:textSize="14.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_with_other"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/or"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/login_taobao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="doLoginFromTaobao"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:src="@drawable/btn_taobao_login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="淘宝"
+                android:textColor="#ff000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25.0dip"
+            android:layout_marginRight="25.0dip"
+            android:gravity="center"
+            android:onClick="doLoginFromQQ"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:src="@drawable/btn_qq_login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QQ"
+                android:textColor="#ff000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_sina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="doLoginFromSina"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="70.0dip"
+                android:layout_height="70.0dip"
+                android:src="@drawable/btn_sina_login" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新浪微博"
+                android:textColor="#ff000000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/login_with_other" 
+        android:layout_marginTop="50dp"
+        android:paddingLeft="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/detail_fav_active"
+            android:text="收藏喜欢的宝贝" 
+            android:drawablePadding="5dp"
+            android:textColor="#676767"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/detail_buy_active"
+            android:text="绑定淘宝可直接购买" 
+            android:drawablePadding="5dp"
+            android:textColor="#676767"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/detail_share_active"
+            android:text="分享宝贝给微博好友" 
+            android:drawablePadding="5dp"
+            android:textColor="#676767"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/detail_weixin_active"
+            android:text="将喜欢的宝贝分享到朋友圈" 
+            android:drawablePadding="5dp"
+            android:textColor="#676767"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg_btn_reg"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        android:layout_alignLeft="@+id/login_passward"
+        android:layout_alignRight="@+id/login_passward"
+        android:layout_below="@+id/login_with_other"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/headview_button"
+        android:onClick="doRegister"
+        android:text="注册新用户"
+        android:textColor="#ffffffff"
+        android:textSize="20.0sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

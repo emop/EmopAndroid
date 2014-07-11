@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+   
+	<ImageView android:id="@+id/main_front_pic" 
+	    android:clickable="false" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:src="@drawable/main_startup"
+	    android:background="#ffF84540"
+	    android:padding="10dp"
+	    android:scaleType="centerCrop"
+	     /> 
+	    <RelativeLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical"
+        >
+			<TextView android:id="@+id/launch_status" 
+				android:text="加载中..."
+				android:layout_width="fill_parent"	
+				android:layout_height="wrap_content"	
+				android:textColor="#780B25"
+				android:textSize="14dp"
+				android:layout_alignParentBottom="true"
+				android:layout_marginBottom="40dp"
+				android:gravity="center"
+				 /> 
+		 </RelativeLayout>
+</FrameLayout>

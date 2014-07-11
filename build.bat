@@ -1,0 +1,5 @@
+cmd /c "android update project --path . --target 2"
+cmd /c "android update project --path libs\\com_weibo_android --target 2"
+cmd /c "android update project --path libs\\TopSDK --target 2"
+cmd /c "ant clean"
+cmd /c "ant release"
